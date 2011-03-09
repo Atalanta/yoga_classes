@@ -1,0 +1,38 @@
+# Yoga Classes
+
+This is a silly little Sinatra app that provides some functionality and renders some pages that can be styled with haml/sass/javascript.
+
+The idea is that the app presents a view of all the available classes at a Yoga studio.  It is possible to unsubscribe students from a class, and it is possible to promote a student into a harder class.
+
+Ultimately, the idea is to present this functionality using columns and draggable boxes reprsenting the students.
+
+## Initialisation
+
+State is stored in a two YAML files:
+
+* index.yaml
+* classes.yaml
+
+To begin with a new set of users and classes, run:
+
+> ruby initialise.rb
+
+### Indexes
+
+Indexes is a list of the Yoga classes available at the studio, organised by difficulty.
+
+### Classes
+
+Classes is the database of attendees of each class.
+
+## Running the app
+
+There's a config.ru file which means you can run this with shotgun or rackup, or if, for some reason, you really want to run the app for real, you can serve it with unicorn and Nginx.
+
+> shotgun config.ru
+
+should be all you need to play with it.
+
+## Known issues
+
+For some unfathomable reason, I can't get this to work with my versions of Ruby 1.9.  However, my friend could... I don't care enough to fix this yet - just run it with 1.8.7 or REE and it'll be fine.  It might also be fine on 1.9.
