@@ -1,0 +1,14 @@
+%h1 Yoga Classes
+
+- @classes.each do |yoga_class, student|
+  %h2= yoga_class 
+  - student.each do |s|
+    =s
+    %form(action='/' method='post')
+      %input(type='hidden' name='student' value=s)
+      %input(type='hidden' name='yoga_class' value=yoga_class)
+      %input(type='submit' value='unsubscribe')
+    %form(action='/promote' method='post')
+      %input(type='hidden' name='student' value=s)
+      %input(type='hidden' name='yoga_class' value=yoga_class)
+      %input(type='submit' value='promote')
