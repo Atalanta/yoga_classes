@@ -29,10 +29,13 @@ Classes is the database of attendees of each class.
 
 There's a config.ru file which means you can run this with shotgun or rackup, or if, for some reason, you really want to run the app for real, you can serve it with unicorn and Nginx.
 
+To have a play, just run:
+
 > shotgun config.ru
 
-should be all you need to play with it.
+Then browse to http://localhost:9393
+
 
 ## Known issues
 
-For some unfathomable reason, I can't get this to work with my versions of Ruby 1.9.  However, my friend could... I don't care enough to fix this yet - just run it with 1.8.7 or REE and it'll be fine.  It might also be fine on 1.9.
+For some reason, I can't get this to work with my versions of Ruby 1.9.  However, my friend could... I plan to fix this very soon, however, until then, just run it with 1.8.7 or REE and it'll be fine.  It might also be fine on 1.9 for you.  YMMV.
